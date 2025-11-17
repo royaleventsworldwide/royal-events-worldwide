@@ -1,121 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -136,23 +18,68 @@ export default function Navbar() {
 const styles = {
   nav: {
     backgroundColor: "black",
+    padding: "15px",
     color: "gold",
+    fontSize: "20px",
+    fontWeight: "bold",
     display: "flex",
     justifyContent: "space-between",
-    padding: "1rem 2rem",
     alignItems: "center",
   },
   logo: {
+    fontSize: "22px",
     fontWeight: "bold",
-    fontSize: "1.2rem",
+    color: "gold",
   },
   links: {
     display: "flex",
-    gap: "1.5rem",
+    gap: "20px",
   },
   link: {
-    color: "gold",
+    color: "emerald",
     textDecoration: "none",
-    fontWeight: "500",
+    fontWeight: "bold",
   },
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
