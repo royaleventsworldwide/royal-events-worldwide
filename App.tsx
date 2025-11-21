@@ -1,23 +1,23 @@
-// src/App.tsx
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import React, { useEffect, useState } from 'react';
 
-function App() {
+const particles = Array.from({ length: 18 }, (_, i) => ({
+  left: `${(i * 17) % 100}%`,
+  delay: `${(i * 0.4).toFixed(1)}s`,
+}));
+
+const App: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <main style={{ padding: "2rem" }}>
-        <Routes>
-          <Route path="/" element={<h1>Home Page</h1>} />
-          <Route path="/edutainment" element={<h1>Edutainment Page</h1>} />
-          <Route path="/wellness" element={<h1>Wellness Page</h1>} />
-          <Route path="/bookings" element={<h1>Bookings Page</h1>} />
-          <Route path="/contact" element={<h1>Contact Page</h1>} />
-        </Routes>
-      </main>
-    </BrowserRouter>
-  );
-}
-
-export default App;
+    <div className="app">
+      {/* HERO */}
+      <section className="hero">
+        {/* background image with parallax */}
+        <div
+          class
